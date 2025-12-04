@@ -34,7 +34,7 @@ namespace PlayerCounter
 
       if (string.IsNullOrEmpty(id))
       {
-        id = $"{SystemInfo.deviceUniqueIdentifier}_{UnityEngine.Random.Range(1000, 9999)}";
+        id = SystemInfo.deviceUniqueIdentifier;
         PlayerPrefs.SetString(prefsKey, id);
         PlayerPrefs.Save();
         Log.LogDebug("Generated new player ID");
